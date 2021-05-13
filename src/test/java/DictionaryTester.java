@@ -58,35 +58,35 @@ public class DictionaryTester {
 
     @Test
     public void validateColdWord() {
-        when(dictService.isValidWord("COLD")).thenReturn(isThisEnglish("COLD"));
-        Assert.assertTrue(dictionary.isValidWord("COLD"));
+        when(dictService.isEnglishWord("COLD")).thenReturn(isThisEnglish("COLD"));
+        Assert.assertTrue(dictionary.isEnglishWord("COLD"));
     }
     @Test
     public void validateHOTWord() {
-        when(dictService.isValidWord("HOT")).thenReturn(isThisEnglish("HOT"));
-        Assert.assertTrue(dictionary.isValidWord("HOT"));
+        when(dictService.isEnglishWord("HOT")).thenReturn(isThisEnglish("HOT"));
+        Assert.assertTrue(dictionary.isEnglishWord("HOT"));
     }
     @Test
     public void validateZYSEWord() {
-        when(dictService.isValidWord("ZYSE")).thenReturn(isThisEnglish("ZYSE"));
-        Assert.assertFalse(dictionary.isValidWord("ZYSE"));
+        when(dictService.isEnglishWord("ZYSE")).thenReturn(isThisEnglish("ZYSE"));
+        Assert.assertFalse(dictionary.isEnglishWord("ZYSE"));
     }
     @Test
     public void validateWERDSZWord() {
-        when(dictService.isValidWord("WERDSZ")).thenReturn(isThisEnglish("WERDSZ"));
-        Assert.assertFalse(dictionary.isValidWord("WERDSZ"));
+        when(dictService.isEnglishWord("WERDSZ")).thenReturn(isThisEnglish("WERDSZ"));
+        Assert.assertFalse(dictionary.isEnglishWord("WERDSZ"));
     }
     @Test
     public void validateOKWord() {
-        when(dictService.isValidWord("OK")).thenReturn(isThisEnglish("OK"));
-        Assert.assertTrue(dictionary.isValidWord("OK"));
+        when(dictService.isEnglishWord("OK")).thenReturn(isThisEnglish("OK"));
+        Assert.assertTrue(dictionary.isEnglishWord("OK"));
         Assert.assertEquals(Arrays.asList("k","ko","o", "ok"),(dictionary.findPossibleWords("OK")));
     }
 
     @Test
     public void validateWorkingWord() {
-        when(dictService.isValidWord("WORKING")).thenReturn(isThisEnglish("WORKING"));
-        Assert.assertTrue(dictionary.isValidWord("WORKING"));
+        when(dictService.isEnglishWord("WORKING")).thenReturn(isThisEnglish("WORKING"));
+        Assert.assertTrue(dictionary.isEnglishWord("WORKING"));
         dictionary.findPossibleWords("WORKING");
     }
 }

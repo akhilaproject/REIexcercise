@@ -8,8 +8,8 @@ public class Dictionary {
     public List<String> getDictionary() {
         return dictionaryService.getDictionary();
     }
-    public boolean isValidWord(String word) {
-        return dictionaryService.isValidWord(word);
+    public boolean isEnglishWord(String word) {
+        return dictionaryService.isEnglishWord(word);
     }
     public List<String> findPossibleWords(String input) {
         ArrayList <String> matches = new ArrayList <String> ();
